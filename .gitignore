@@ -1,0 +1,44 @@
+# Node modules (HUGE - never commit these)
+node_modules/
+
+# Test results and reports
+test-results/
+playwright-report/
+test-results.json
+junit.xml
+
+# Environment variables (if any)
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Screenshots (if auto-generated)
+screenshots/
+*.png
+*.webm
+*.mp4
+
+# Playwright trace files
+*.trace.zip
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
