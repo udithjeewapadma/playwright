@@ -1,12 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Read environment variables from file.
- * https://github.com/lorenwest/node-config
- */
-// const config = require('./config');
-
-/**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
@@ -38,7 +32,7 @@ export default defineConfig({
   
   // Shared settings for all tests
   use: {
-    baseURL: 'https://www.pixelsuite.com/',
+    baseURL: 'https://www.pixelssuite.com/',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -46,7 +40,7 @@ export default defineConfig({
     navigationTimeout: 30000,
   },
   
-  // Configure projects for different browsers
+  // Configure projects for 2 browsers only
   projects: [
     {
       name: 'chromium',
@@ -55,32 +49,13 @@ export default defineConfig({
         viewport: { width: 1920, height: 1080 }
       },
     },
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'],
-        viewport: { width: 1920, height: 1080 }
-      },
-    },
-    {
-      name: 'webkit',
-      use: { 
-        ...devices['Desktop Safari'],
-        viewport: { width: 1920, height: 1080 }
-      },
-    },
-    {
-      name: 'mobile-chrome',
-      use: { 
-        ...devices['Pixel 5'],
-      },
-    },
-    {
-      name: 'mobile-safari',
-      use: { 
-        ...devices['iPhone 12'],
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { 
+    //     ...devices['Desktop Firefox'],
+    //     viewport: { width: 1920, height: 1080 }
+    //   },
+    // },
   ],
   
   // Output folder for test results
